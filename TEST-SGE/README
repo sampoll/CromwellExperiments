@@ -1,0 +1,9 @@
+Test to run a tiny scatter/gather job on the Channing SGE cluster using the SGE backend. 
+Command: java -Dconfig.file=sge.conf -jar cromwell-30.1.jar run tiny.wdl -i tiny.json
+
+Note: capecod has a version of java too old to run Cromwell. Remote nodes seem to have
+more recent version. Use "qrsh -l R" to get to backnode, then "java -version" to make
+sure the node has 1.8.
+
+Runs four jobs of a R script on cluster nodes to find maximum of a file of
+integers, then the same script to find the maximum of the maxima. 

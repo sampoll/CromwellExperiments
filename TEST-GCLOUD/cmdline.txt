@@ -1,0 +1,1 @@
+java -Dconfig.file=google.conf -jar cromwell-30.1.jar run tiny.wdl -i tiny.inputs

@@ -1,0 +1,5 @@
+{
+  "wf.inputFiles": "tinyFiles",
+  "wf.gtask.rscript": "tiny.R",
+  "wf.gtask2.rscript": "tiny.R"
+}

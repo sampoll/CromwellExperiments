@@ -1,0 +1,23 @@
+Test to run a tiny scatter/gather job in the Google Pipelines API
+
+Runs four jobs of a R script on cloud nodes to find maximum of a file of
+integers, then the same script to find the maximum of the maxima. 
+
+Make a Google Cloud Project and Google Cloud Storage bucket as described in:
+  http://cromwell.readthedocs.io/en/develop/tutorials/PipelinesApi101/
+  Section: Configuring a Google Project
+
+Note: in addition to Google Cloud Storage, Google Compute Engine API, and
+  Genomics API, need to enable Google Cloud Storage JSON API
+
+Modify google.conf to change the names of the project and bucket at line 33-34
+
+Command: java -Dconfig.file=google.conf -jar ../cromwell-30.1.jar run tiny.wdl -i tiny.inputs
+
+To see output, log into the Google Cloud Console, click menu (horizontal lines) in upper left, 
+  scroll down to Storage, click Browser. Then go to 
+  bucket-name/cromwell-executions/wf/<job-id>/call-finalize/finalize-stdout.log
+  (The job name is in the screen output from Cromwell.)
+  
+Note: this is a prototype only, it takes a very long time. 
+

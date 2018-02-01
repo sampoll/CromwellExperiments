@@ -1,0 +1,6 @@
+Test to run a tiny scatter/gather job locally. 
+Command: java -jar /path/to/cromwell-30.1.jar run tiny.wdl -i tiny.json
+
+Runs four jobs of a perl script on Docker Ubuntu container to find maximum of a file of
+integers, then the same script to find the maximum of the maxima. (Note: perl script is
+changed to R script in subsequent tests.)
